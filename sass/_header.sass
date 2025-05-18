@@ -1,0 +1,126 @@
+.header
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 9999
+    --pt: 20px
+    padding: var(--pt) 0 0
+    position: absolute
+    z-index: 1
+    .container
+        padding: 8px 20px
+        border: 2px solid #F5F5F5
+        background-color: $white
+        border-radius: 10px
+
+    .logo
+        gap: 15px
+        position: relative
+        z-index: 10
+        img
+            max-width: 46px
+        &__title
+            text-align: left
+            line-height: 100%
+
+        &__heading
+            display: block
+            font-weight: 700
+            font-size: 22px
+            margin: 0 0 5px
+
+        &__descr
+            display: block
+            font-weight: 400
+            font-size: 12px
+
+    .btn__menu
+        display: none
+        position: relative
+        z-index: 10
+        opacity: 1 !important
+
+    .nav
+        gap: 20px
+        &__link
+            font-weight: 400
+            font-size: 15px
+            line-height: 100%
+            padding: 10px
+            &:last-child
+                padding-right: 0
+
+    @media (max-width: 1100px)
+        overflow: hidden
+        transition: all .3s ease
+        height: 93px
+        --pt: 25px
+        .container
+            transition: inherit
+
+        &.active
+            background-color: rgba(0, 0, 0, .5)
+            height: 100vh
+
+        .btn__menu
+            display: block
+            width: 48px
+            height: 48px
+            position: relative
+
+            &::before,
+            &::after
+                content: ''
+                transition: inherit
+                display: block
+                margin: 0 auto
+                height: 3px
+                width: 30px
+                position: absolute
+                top: calc(50% - 4.5px)
+                right: 0
+                transform: translateY(-50%)
+                border-radius: 5px
+                background-color: $black
+
+            &::after
+                width: 26px
+                top: calc(50% + 4.5px)
+
+            &.active
+                &::before,
+                &::after
+                    top: 50%
+                    transform: translateY(-50%) rotate(45deg)
+
+                &::after
+                    width: 30px
+                    transform: translateY(-50%) rotate(-45deg)
+
+        .nav
+            position: absolute
+            z-index: 1
+            width: calc( 100% - 15px )
+            top: calc( var(--pt) - 5px )
+            right: 0
+            transition: inherit
+            background-color: #FAFAFA
+            opacity: 0
+            visibility: hidden
+            border-radius: 20px 0 0 20px
+            transform: translateX(20%)
+            display: block
+            padding: 123px 20px 93px
+            &__link
+                display: block
+                font-size: 26px
+                padding: 12px 0
+                line-height: 100%
+                color: #757E92
+
+            &.active
+                opacity: 1
+                visibility: visible
+                transform: translateX(0)
+
+    @media (max-width: 720px)

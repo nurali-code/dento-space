@@ -1,0 +1,31 @@
+.footer
+    margin-top: auto
+    background-color: $prime
+    color: $white
+    padding: 60px 0
+    &__link
+        text-align: right
+        display: block
+        color: $white
+
+    &__link, p
+        font-weight: 400
+        font-size: 16px
+        line-height: 140%
+
+    .fx-col
+        gap: 10px
+
+    @media screen and ( max-width: 720px )
+        text-align: center
+        padding: 50px 0
+        &__link
+            text-align: center
+
+        .fx-col
+            &:first-child
+                gap: 30px
+                margin-bottom: 30px
+
+        .container
+            display: block

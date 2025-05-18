@@ -1,0 +1,127 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+
+.hero
+    text-align: center
+    padding-top: 55px
+    padding-bottom: 0
+    // background-repeat: no-repeat
+    // background-position: center center
+    // background-image: url('../img/bg__line.svg')
+    .container
+        padding-top: 100px
+        width: 100%
+        padding-bottom: 112px
+        border-radius: 20px 20px 0 0
+        background-position: top center
+        background-image: url('../img/hero__bg.jpg')
+        border-bottom: none
+
+    &__title
+        font-weight: 400
+        font-size: 70px
+        line-height: 103%
+        margin: 0 0 15px
+
+    &__descr
+        max-width: 624px
+        font-size: 18px
+        color: #565E70
+        line-height: 145%
+        margin: 0 auto 40px
+
+    &__subtext
+        font-weight: 500
+        font-size: 22px
+        line-height: 160%
+        margin: 0 0 20px
+
+    &__img
+        max-width: 80%
+        margin: 0 auto 40px
+
+    &__btns
+        gap: 10px
+
+    @media screen and ( max-width: 1500px )
+        &__title
+            font-size: 54px
+
+        .container
+            padding: 98px 15px
+
+    @media screen and ( max-width: 992px )
+        &__title
+            font-size: 46px
+
+        &__img
+            min-width: 450px
+
+    @media screen and ( max-width: 720px )
+        .container
+            padding-bottom: 70px
+            &>*
+                order: 1
+
+        &__descr
+            margin-bottom: 25px
+
+        &__btns
+            margin-bottom: 50px
+
+        &__picture
+            width: 100vw
+            overflow: hidden
+            position: relative
+            left: -15px
+            aspect-ratio: 390/260
+            display: block
+            order: 2 !important
+
+        &__subtext
+            font-size: 24px
+            line-height: 145%
+            margin-bottom: 15px
+
+        &__img
+            top: 0
+            max-height: 100%
+            max-width: 100%
+            object-fit: contain
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            margin: 0
+
+    @media screen and ( max-width: 370px )
+        &__title
+            font-size: 36px
+
+.download
+    padding: 0
+    &__links
+        gap: 20px
+
+    &__link 
+        display: block
+        max-width: 216px
+
+    .container
+       
+        background-position: center bottom
+        background-image: url('../img/download__bg.jpg')
+        padding: 110px 15px
+
+    @media screen and ( max-width: 992px )
+        padding-bottom: 70px
+        .container
+            padding: 70px 15px
+
+        &__links
+            max-width: 600px
+            margin: 0 auto
+
+        
+
+@import 'footer'
