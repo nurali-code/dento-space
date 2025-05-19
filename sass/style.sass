@@ -1,5 +1,6 @@
 @import 'normolize'
 @import 'elements'
+@import 'slick'
 @import 'header'
 
 .hero
@@ -203,6 +204,18 @@
     &__title
         margin-bottom: 5px
 
+    &__get
+        background-repeat: no-repeat
+        background-position: center bottom
+        background-image: url('../img/bg_get.svg')
+        text-align: center
+        padding: 50px 15px 60px
+        .fx-ac
+            gap: 10px
+            &>*
+                display: block
+                width: 216px
+
     @media screen and ( max-width: 1600px )
         &__col
             width: calc(360 / 1420 * 100% )
@@ -233,11 +246,13 @@
                 margin: 40px auto 0
 
     @media screen and ( max-width: 992px )
+        padding: 0 0 35px
         .container
             &.--lg
                 padding: 70px 15px 40px
                 width: 100%
                 border: none
+
         &__item
             margin: 0
             width: 343px
@@ -261,6 +276,69 @@
             min-width: 260px
             &.--mob
                 margin-top: 20px
+
+.capability
+    padding: 0
+    .container
+        width: 100%
+        &.--lg
+            padding: 110px 15px
+    &__list
+        gap: 10px
+
+    &__item
+        background-color: $prime
+        color: $white
+        padding: 20.5px 50px 19.5px
+        border-radius: 40px
+        gap: 10px
+        white-space: nowrap
+        font-weight: 500
+        font-size: 18px
+        line-height: 165%
+        text-align: center
+
+        &::after
+            content: ''
+            display: inline-block
+            width: 18px
+            height: 18px
+            vertical-align: middle
+            border-radius: 50%
+            background-repeat: no-repeat
+            background-size: contain
+            background-image: url('../img/info.svg')
+
+    .slick
+        &-list,
+        &-track
+            padding: 0 15px
+        &-slider
+            width: 100%
+        &-slide
+            margin: 0 7.5px
+            &>*
+                margin-bottom: 5px
+
+    @media screen and ( max-width: 992px )
+        &__item 
+            text-align: left
+            padding: 15px 55px 15px 25px
+            position: relative
+            line-height: 125%
+            z-index: 1
+            white-space: normal
+            max-width: calc( 100vw - 30px )
+            text-wrap: balance
+            &::after
+                top: 50%
+                right: 25px
+                margin-top: -9px
+                position: absolute
+        .container
+            &.--lg
+                border: none
+                padding: 35px 0
 
 .faq
     &__text
@@ -301,6 +379,13 @@
             top: 6px
             right: 0
             font-size: 40px
+            transform-origin: 50% 50%
+            transition: all ease .3s
+
+        &.active
+            opacity: 1
+            &:after
+                transform: rotate(45deg)
 
     @media screen and ( max-width: 992px )
         .container
@@ -311,7 +396,8 @@
         &-item
             padding: 10px 20px
 
-        &__heading 
+        &__heading
+            line-height: 130%
             padding: 10px 73px 10px 0
 
 @import 'footer'
