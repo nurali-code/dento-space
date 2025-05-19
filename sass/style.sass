@@ -282,7 +282,8 @@
     .container
         width: 100%
         &.--lg
-            padding: 110px 15px
+            padding: 110px 0
+    
     &__list
         gap: 10px
 
@@ -320,6 +321,9 @@
             &>*
                 margin-bottom: 5px
 
+    @media screen and ( max-width: 1000px )
+
+
     @media screen and ( max-width: 992px )
         &__item 
             text-align: left
@@ -335,6 +339,7 @@
                 right: 25px
                 margin-top: -9px
                 position: absolute
+
         .container
             &.--lg
                 border: none

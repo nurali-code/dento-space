@@ -76,7 +76,7 @@ $('.capability__list').slick({
     mobileFirst: true,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1100,
             settings: "unslick"
         },
     ]
