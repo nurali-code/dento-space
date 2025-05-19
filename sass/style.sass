@@ -100,30 +100,6 @@
         &__title
             font-size: 36px
 
-.download
-    padding: 0
-    &__links
-        gap: 20px
-
-    &__link
-        display: block
-        max-width: 216px
-
-    .container
-
-        background-position: center bottom
-        background-image: url('../img/download__bg.jpg')
-        padding: 110px 15px
-
-    @media screen and ( max-width: 992px )
-        padding-bottom: 70px
-        .container
-            padding: 70px 15px
-
-        &__links
-            max-width: 600px
-            margin: 0 auto
-
 .features
     padding: 0
     .container
@@ -280,10 +256,9 @@
 .capability
     padding: 0
     .container
-        width: 100%
         &.--lg
-            padding: 110px 0
-    
+            padding: 110px 15px
+
     &__list
         gap: 10px
 
@@ -321,11 +296,17 @@
             &>*
                 margin-bottom: 5px
 
-    @media screen and ( max-width: 1000px )
+    @media screen and ( max-width: 1360px )
+        .container
+            width: 100%
+            &.--lg
+                border: none
+                padding: 110px 15px
 
+    @media screen and ( max-width: 1100px )
 
     @media screen and ( max-width: 992px )
-        &__item 
+        &__item
             text-align: left
             padding: 15px 55px 15px 25px
             position: relative
@@ -346,6 +327,7 @@
                 padding: 35px 0
 
 .faq
+    padding: 0
     &__text
         display: none
 
@@ -393,10 +375,11 @@
                 transform: rotate(45deg)
 
     @media screen and ( max-width: 992px )
+        padding: 35px 0
         .container
             &.--lg
                 border: none
-                padding: 70px 0
+                padding: 0
 
         &-item
             padding: 10px 20px
@@ -404,5 +387,179 @@
         &__heading
             line-height: 130%
             padding: 10px 73px 10px 0
+
+.price
+    text-align: center
+    h2
+        color: $white
+
+    .container
+        &.--lg
+            position: relative
+            z-index: 1
+            padding: 100px 15px
+            overflow: hidden
+            background: linear-gradient(90deg, #037179 0%, #09838B 21.55%, #1DBBC6 81.84%, #23CCD7 100%)
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                position: absolute
+                top: 0
+                left: 0
+                z-index: -11
+                height: 100%
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                background-image: url('../img/price__bg.jpg')
+                pointer-events: none
+
+    &__list
+        max-width: 960px
+        margin: 0 auto 50px
+        gap: 20px
+        &>*
+            width: calc( 50% - 10px )
+
+    &__item
+        padding: 40px
+        border-radius: 20px
+        background-color: $white
+
+    &__heading
+        font-size: 32px
+        text-align: left
+        line-height: 100%
+        margin: 0 0 35px
+
+        padding-bottom: 20px
+        border-bottom: 1px solid rgba(#23304C, .2)
+
+        img
+            margin-left: auto
+
+    &__text
+        text-align: center
+        margin: 0 0 25px
+
+    &__vall
+        font-size: 32px
+        line-height: 100%
+        margin: 0 0 35px
+        b
+            font-size: 48px
+
+    &__info
+        max-width: 850px
+        margin: 0 auto
+        color: $white
+
+    .btn
+        margin: 0 auto
+
+    @media screen and ( max-width: 992px )
+        .container
+            &.--lg
+                padding: 70px 15px
+        &__item
+            padding: 30px
+
+        &__list
+            max-width: 780px
+            margin-bottom: 35px
+
+        &__vall
+            font-size: 22px
+            margin-bottom: 20px
+            b
+                font-size: 32px
+
+        &__heading
+            font-size: 30px
+            line-height: 125%
+            margin-bottom: 20px
+
+        &__info
+            max-width: 700px
+            font-size: 18px
+
+    @media screen and ( max-width: 720px )
+        &__item
+            width: 100%
+
+.contacts
+    .container
+        &.--lg
+            padding: 110px 15px
+
+    iframe
+        border-radius: 20px
+
+    &__col
+        min-width: 425px
+        width: 425px
+
+    &__wrap
+        gap: 50px
+
+    &__item
+        display: block
+        margin: 0 0 40px
+        &:last-child
+            margin-bottom: 0
+
+    &__label
+        font-size: 16px
+        line-height: 140%
+        display: block
+        margin-bottom: 10px
+
+    &__text
+        display: block
+        font-weight: 500
+        font-size: 32px
+        line-height: 125%
+
+    @media screen and ( max-width: 992px )
+        .container
+            &.--lg
+                padding: 0 
+                border: none
+        &__col
+            margin-bottom: 30px
+
+        &__wrap
+            display: block
+            &>*
+                width: 100% !important
+                min-width: 100%
+
+.download
+    padding: 0
+    &__links
+        gap: 20px
+
+    &__link
+        display: block
+        max-width: 216px
+
+    .container
+
+        background-position: center bottom
+        background-image: url('../img/download__bg.jpg')
+        padding: 110px 15px
+        @media screen and ( min-width: 992px )
+            border-bottom: none
+            border-radius: 20px 20px 0 0
+
+    @media screen and ( max-width: 992px )
+        padding-bottom: 70px
+        .container
+            padding: 70px 15px
+
+        &__links
+            max-width: 600px
+            margin: 0 auto
 
 @import 'footer'
