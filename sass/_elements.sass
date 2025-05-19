@@ -14,6 +14,8 @@
     --red: #E61717
     --bg: #fff
     --menu: #FAFAFA
+    --cont: 1420px
+    --cont-lg: 1598px
 
 $alfa: rgba(0, 0, 0, 0)
 $prime: var(--prime)
@@ -43,11 +45,11 @@ body
         overflow: hidden
 
 .container
-    max-width: 1420px
+    max-width: var(--cont)
     width: calc( 100% - 30px )
     margin: 0 auto
     &.--lg
-        max-width: 1598px
+        max-width: var(--cont-lg)
         margin: 0 auto
         border-radius: 20px
         border: 2px solid #F5F5F5
@@ -62,11 +64,25 @@ img
     display: block
     max-width: 100%
 
-.h2
+h3,.h3
+    font-size: 22px
+    line-height: 145%
+
+p
+    font-size: 16px
+    line-height: 140%
+    &:last-child
+        margin-bottom: 0
+
+h2,.h2
     font-size: 56px
     line-height: 125%
     text-align: center
     margin-bottom: 60px
+
+.c
+    &-gray
+        color: #565E70
 
 a,
 button
@@ -191,13 +207,13 @@ section
         padding: 20px 0
 
 @media screen and ( max-width: 1600px )
-    .container
-        max-width: 1220px
-        &.--lg 
-            max-width: 1360px
+    :root
+        --cont: 1220px
+        --cont-lg: 1360px
+        
 
 @media screen and ( max-width: 992px )
-    .h2 
+    .h2
         font-size: 40px
         line-height: 115%
         margin-bottom: 40px

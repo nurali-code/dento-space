@@ -5,6 +5,7 @@
 .hero
     text-align: center
     padding-top: 55px
+    overflow: hidden
     padding-bottom: 0
     // background-repeat: no-repeat
     // background-position: center center
@@ -103,12 +104,12 @@
     &__links
         gap: 20px
 
-    &__link 
+    &__link
         display: block
         max-width: 216px
 
     .container
-       
+
         background-position: center bottom
         background-image: url('../img/download__bg.jpg')
         padding: 110px 15px
@@ -122,6 +123,143 @@
             max-width: 600px
             margin: 0 auto
 
-        
+.features
+    padding: 0
+    .container
+        &.--lg
+            padding: 90px 1px 110px
+
+    &__list
+        --g: 50px
+        --am: 4
+        gap: var(--g)
+        &>*
+            width: calc( (100% - var(--g)* (var(--am) - 1)) / var(--am) )
+
+    &__item
+        img
+            margin: 0 0 30px
+            width: 105px
+
+    &__title
+        margin: 0 0 5px
+
+    @media screen and ( max-width: 1600px )
+        &__list
+            --g: 35px
+            --am: 4
+
+        @media screen and ( min-width: 1200px )
+            &__title
+                font-size: 20px
+
+    @media screen and ( max-width: 1200px )
+        &__list
+            --g: 40px
+            --am: 2
+
+        .container
+            &.--lg
+                padding: 70px 1px
+
+    @media screen and ( max-width: 720px )
+        &__list
+            --am: 1
+
+        &__item
+            img
+                margin-bottom: 20px
+
+.app
+    padding: 0
+    --item: 353px
+    .container
+        &.--lg
+            padding: 110px 1px 70px
+
+    &__list
+        gap: 30px
+
+    &__col
+        width: calc(353 / 1420 * 100% )
+
+    &__item
+        border-radius: 20px
+        background-color: #fafafa
+        padding: 30px
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+
+        img
+            width: 64px
+            margin: 0 0 20px
+
+    &__img
+        width: calc(460 / 1420 * 100% )
+        &.--mob
+            display: none
+
+    &__title
+        margin-bottom: 5px
+
+    @media screen and ( max-width: 1600px )
+        &__col
+            width: calc(360 / 1420 * 100% )
+
+        &__img
+            width: calc(520 / 1420 * 100% )
+
+    @media screen and ( max-width: 1300px )
+        @media screen and ( min-width: 992px )
+            &__list
+                flex-wrap: wrap
+                align-items: stretch
+                gap: 20px
+                &>*
+
+            &__item
+                margin: 0
+                width: calc( (100% - 60px ) / 3 )
+
+            &__col
+                display: contents
+
+        &__img
+            display: none
+            &.--mob
+                display: block
+                max-width: 500px
+                margin: 40px auto 0
+
+    @media screen and ( max-width: 992px )
+        .container
+            &.--lg
+                padding: 70px 15px 40px
+                width: 100%
+                border: none
+        &__item
+            margin: 0
+            width: 343px
+
+        &__list
+            padding: 0 15px 10px
+            width: 100vw
+            gap: 10px
+            position: relative
+            z-index: 1
+            left: -15px
+            overflow-x: scroll
+
+        &__col
+            gap: 10px
+            display: flex
+            width: fit-content
+
+        &__img
+            width: 84%
+            min-width: 260px
+            &.--mob
+                margin-top: 20px
 
 @import 'footer'
