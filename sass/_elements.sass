@@ -57,58 +57,61 @@ body
         border: 2px solid #F5F5F5
         background-repeat: no-repeat
         background-size: cover
-        &.--botton-lines,
-        &.--top-lines
-            border-radius: 20px 20px 10px 10px
-            border-bottom: none
-            &::before,
-            &::after
-                content: ''
-                display: block
-                width: 20vw
-                height: 80%
-                box-sizing: border-box
-                position: absolute
-                bottom: 0
-                right: 100%
-                border: 2px solid #F5F5F5
-                // border: 2px solid red
-                background-color: #fff
-                border-radius: 0 0 20px 20px
-                border-top: none
-
-            &::before
-                border-left: none
-                border-bottom-left-radius: 0
-
-            &::after
-                border-bottom-right-radius: 0
-                border-right: none
-                right: auto
-                left: 100%
-
-        &.--top-lines
-            border-radius: 10px 10px 20px 20px
-            border: 2px solid #F5F5F5
-            border-top: none
-            &::before,
-            &::after
-                top: 0
-                bottom: auto
-                right: 100%
-                border: 2px solid #F5F5F5
+        @media screen and ( min-width: 1300px )
+            &.--botton-lines,
+            &.--top-lines
                 border-radius: 20px 20px 0 0
                 border-bottom: none
+                &::before,
+                &::after
+                    content: ''
+                    display: block
+                    width: 20vw
+                    height: 80%
+                    box-sizing: border-box
+                    position: absolute
+                    bottom: 0
+                    right: 100%
+                    border: 2px solid #F5F5F5
+                    // border: 2px solid red
+                    background-color: #fff
+                    border-radius: 0 0 20px 20px
+                    border-top: none
 
-            &::before
-                border-left: none
-                border-bottom-left-radius: 0
+                &::before
+                    border-left: none
+                    border-bottom-left-radius: 0
 
-            &::after
-                border-bottom-right-radius: 0
-                border-right: none
-                right: auto
-                left: 100%
+                &::after
+                    border-bottom-right-radius: 0
+                    border-right: none
+                    right: auto
+                    left: 100%
+
+            &.--top-lines
+                border-radius: 0 0 20px 20px
+                border: 2px solid #F5F5F5
+                border-top: none
+                &::before,
+                &::after
+                    top: 0
+                    bottom: auto
+                    right: 100%
+                    border: 2px solid #F5F5F5
+                    border-radius: 20px 20px 0 0
+                    border-bottom: none
+
+                &::before
+                    border-left: none
+                    border-bottom-left-radius: 0
+
+                &::after
+                    border-bottom-right-radius: 0
+                    border-right: none
+                    right: auto
+                    left: 100%
+           
+
 
 h1, h2, h3, h4, h5, h6
     font-weight: 400
@@ -257,7 +260,7 @@ input
 section
     overflow: hidden
     padding: 60px 0
-    @media screen and ( max-width: 1100px )
+    @media screen and ( max-width: 1300px )
         padding: 35px 0
 
 @media screen and ( max-width: 1600px )
