@@ -262,4 +262,56 @@
             &.--mob
                 margin-top: 20px
 
+.faq
+    &__text
+        display: none
+
+    .container
+        &.--lg
+            padding: 110px 15px
+
+    &-item
+        max-width: 940px
+        margin: 0 auto 10px
+        padding: 20px 40px
+        background-color: #FAFAFA
+        border-radius: 20px
+        &:last-child
+            margin-bottom: 0
+
+        &.active
+            .faq__text
+                display: block
+
+    &__heading
+        position: relative
+        z-index: 1
+        padding: 10px 30px 10px 0
+        margin: 0
+        width: 100%
+        text-align: left
+        text-wrap: stable
+        color: #23304C
+        &::after
+            color: #23304C
+            content: '+'
+            display: block
+            font-weight: normal
+            position: absolute
+            top: 6px
+            right: 0
+            font-size: 40px
+
+    @media screen and ( max-width: 992px )
+        .container
+            &.--lg
+                border: none
+                padding: 70px 0
+
+        &-item
+            padding: 10px 20px
+
+        &__heading 
+            padding: 10px 73px 10px 0
+
 @import 'footer'
