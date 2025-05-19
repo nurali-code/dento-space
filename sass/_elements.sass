@@ -49,12 +49,66 @@ body
     width: calc( 100% - 30px )
     margin: 0 auto
     &.--lg
+        position: relative
+        z-index: 1
         max-width: var(--cont-lg)
         margin: 0 auto
         border-radius: 20px
         border: 2px solid #F5F5F5
         background-repeat: no-repeat
         background-size: cover
+        &.--botton-lines,
+        &.--top-lines
+            border-radius: 20px 20px 10px 10px
+            border-bottom: none
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 20vw
+                height: 80%
+                box-sizing: border-box
+                position: absolute
+                bottom: 0
+                right: 100%
+                border: 2px solid #F5F5F5
+                // border: 2px solid red
+                background-color: #fff
+                border-radius: 0 0 20px 20px
+                border-top: none
+
+            &::before
+                border-left: none
+                border-bottom-left-radius: 0
+
+            &::after
+                border-bottom-right-radius: 0
+                border-right: none
+                right: auto
+                left: 100%
+
+        &.--top-lines
+            border-radius: 10px 10px 20px 20px
+            border: 2px solid #F5F5F5
+            border-top: none
+            &::before,
+            &::after
+                top: 0
+                bottom: auto
+                right: 100%
+                border: 2px solid #F5F5F5
+                border-radius: 20px 20px 0 0
+                border-bottom: none
+
+            &::before
+                border-left: none
+                border-bottom-left-radius: 0
+
+            &::after
+                border-bottom-right-radius: 0
+                border-right: none
+                right: auto
+                left: 100%
 
 h1, h2, h3, h4, h5, h6
     font-weight: 400
@@ -201,14 +255,15 @@ input
             display: none
 
 section
-    padding: 50px 0
+    overflow: hidden
+    padding: 60px 0
     @media screen and ( max-width: 1100px )
         padding: 35px 0
 
 @media screen and ( max-width: 1600px )
     :root
         --cont: 1220px
-        --cont-lg: 1360px
+        --cont-lg: 1300px
 
 @media screen and ( max-width: 992px )
     .h2, h2
