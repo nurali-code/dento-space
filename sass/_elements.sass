@@ -60,8 +60,10 @@ body
         @media screen and ( min-width: 1300px )
             &.--botton-lines,
             &.--top-lines
-                border-radius: 20px 20px 0 0
+                border-radius: 0
+                border: none
                 border-bottom: none
+                h2::before, h1::before,
                 &::before,
                 &::after
                     content: ''
@@ -74,9 +76,19 @@ body
                     right: 100%
                     border: 2px solid #F5F5F5
                     // border: 2px solid red
-                    background-color: #fff
                     border-radius: 0 0 20px 20px
                     border-top: none
+
+                h2::before, h1::before
+                    // background-color: red
+                    top: 0
+                    width: 100%
+                    left: -2px
+                    right: auto
+                    box-sizing: content-box
+                    border-top: 2px solid #F5F5F5
+                    border-bottom: none
+                    border-radius: 20px 20px 0 0
 
                 &::before
                     border-left: none
@@ -89,9 +101,7 @@ body
                     left: 100%
 
             &.--top-lines
-                border-radius: 0 0 20px 20px
-                border: 2px solid #F5F5F5
-                border-top: none
+                h2::before, h1::before
                 &::before,
                 &::after
                     top: 0
@@ -110,7 +120,13 @@ body
                     border-right: none
                     right: auto
                     left: 100%
-           
+
+                h2::before, h1::before
+                    top: auto
+                    bottom: 0
+                    border-bottom: 2px solid #F5F5F5
+                    border-top: none
+                    border-radius: 0 0 20px 20px
 
 
 h1, h2, h3, h4, h5, h6
